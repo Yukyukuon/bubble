@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class Form1 : Form
+    {
+        int x = 50, y = 50;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+           // DialogResult r1 = MessageBox.Show("DING");  测试按键响应
+           if(e.KeyCode == Keys.Up) { y = y - 5; }
+            if (e.KeyCode == Keys.Down) { y = y + 5; }
+            if (e.KeyCode == Keys.Left) { x = x - 5; }
+            if (e.KeyCode == Keys.Right) { x = x + 5; }
+            Draw();
+        }
+        private void Draw()
+        {             //双缓存解决图片闪烁
+            Bitmap bitmap = new Bitmap(@"2.png");
+            bitmap.SetResolution(96, 96);
+            //创建在PictueBox 1上的图形g1
+            Graphics g1 = pictureBox1.CreateGraphics();
+            //图形画在内存上
+            BufferedGraphicsContext currentContext = BufferedGraphicsManager.Current;
+            BufferedGraphics myBuffer = currentContext.Allocate(g1,this.DisplayRectangle);
+            Graphics g = myBuffer.Graphics;
+            g.DrawImage(bitmap, x, y);
+            myBuffer.Render();
+            myBuffer.Dispose();
+                   //旧方法GDI+绘图
+            /*pictureBox1.Refresh();
+            Bitmap bitmap = new Bitmap(@"2.png");
+            Graphics g = pictureBox1.CreateGraphics();
+            g.DrawImage(bitmap, x, y);*/
+        }
+    }
+}

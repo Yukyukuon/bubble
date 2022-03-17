@@ -1,0 +1,8 @@
+D:\519\GAME\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+L:\pu2\519\GAME\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+L:\pu2\519\GAME\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+L:\pu2\519\GAME\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+L:\pu2\519\GAME\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache
+L:\pu2\519\GAME\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+L:\pu2\519\GAME\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+L:\pu2\519\GAME\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
